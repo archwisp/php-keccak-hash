@@ -1,0 +1,67 @@
+Keccak hash function for PHP 
+Version 0.1
+
+Keccak (pronounced [kɛtʃak], like “ketchak”) is a family of hash functions that
+has been submitted as candidate to NIST's hash algorithm competition (SHA-3).
+
+The author of this extension was in no way involved in the development of the
+Grøstl hash function. The hash source code was taken directly from NIST
+submission package with a few minor variable name changes so that it would play
+nice with PHP.
+
+See the CREDITS section for more details.
+
+= INSTALLATION =
+
+You'll need to have the PHP 5 development package and a working build
+environment to compile this module.
+
+To compile and install:
+
+   phpize
+   ./configure --enable-keccak
+   make
+   sudo make install
+
+Then add the following to your php.ini file:
+
+   extension=keccak.so
+
+= USAGE =
+
+Function Description:
+   
+   string keccak_hash(string $string [, int bit_length = 512])
+
+Example:
+
+   // Build a base-64 encoded hash
+   $hash = base64_encode(keccak_hash('Hello, world.'));
+
+= CREDITS =
+
+The Keccak team: Guido Bertoni, Joan Daemen, Michaël Peeters,
+and Gilles Van Assche.
+
+For more details, see: 
+
+   http://keccak.noekeon.org/
+   http://csrc.nist.gov/groups/ST/hash/sha-3/Round3/submissions_rnd3.html
+
+PHP extension written by Bryan C. Geraghty <bryan@ravensight.org>
+
+= LICENSE =
+
+The SHA-3 Submission Requirements states:
+
+   "Each submitted algorithm must be available worldwide on a royalty free
+   basis during the period of the hash function competition."
+
+If the algorithm is selected as the winner of the competition, the following
+applies: 
+
+   "an irrevocable nonexclusive royalty-free license to practice the referenced
+   algorithm, reference implementation or the optimized implementations"
+
+If the algorithm is not selected as the winner, the license will be determined
+by the team.
