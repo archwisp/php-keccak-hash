@@ -7,7 +7,7 @@ and selected as one of the five finalists.  Keccak can be considered as a
 successor of RadioGatún; However, it has a very different design philosophy.
 
 The author of this extension was in no way involved in the development of the
-Grøstl hash function. The hash source code was taken directly from NIST
+Keccak hash function. The hash source code was taken directly from NIST
 submission package with a few minor variable name changes so that it would play
 nice with PHP.
 
