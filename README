@@ -18,7 +18,7 @@ See the CREDITS section for more details.
 You'll need to have the PHP 5 development package and a working build
 environment to compile this module.
 
-To compile and install:
+To compile and install the PHP extension:
 
    phpize
    ./configure --enable-keccak
@@ -28,6 +28,10 @@ To compile and install:
 Then add the following to your php.ini file:
 
    extension=keccak.so
+
+To build the keccak-cli program:
+
+    gcc -g -O2 keccak-cli.c  KeccakF-1600-opt64.c  KeccakNISTInterface.c KeccakSponge.c -o keccak-cli
 
 = USAGE =
 
