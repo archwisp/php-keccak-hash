@@ -56,8 +56,8 @@ PHP_MINFO_FUNCTION(keccak)
 
 PHP_FUNCTION(keccak_hash)
 {
-   char hash[64];
    char *buffer = NULL;
+   char hash[64];
    int buffer_size;
    long hash_bit_length = KECCAK_DEFAULT_BIT_LENGTH;
 
@@ -66,10 +66,11 @@ PHP_FUNCTION(keccak_hash)
    {
       RETURN_FALSE;
    }
-  
+   
+   memset(hash, 0, sizeof hash);
    HashReturn result;
 
-   if ((result = Hash((size_t) hash_bit_length, buffer, buffer_size, hash)) != HASH_SUCCESS)
+   if ((result = Hash((size_t) hash_bit_length, buffer, buffer_size * 8, hash)) != HASH_SUCCESS)
    {
       if (result == BAD_HASHLEN)
       {
