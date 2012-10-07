@@ -1,13 +1,13 @@
-Keccak hash function for PHP 
-Version 0.1
+Keccak (SHA-3) hash function for PHP
+Version 0.2
 
-Keccak (pronounced [kɛtʃak], like “ketchak”) is a family of hash functions that
-has been submitted as candidate to NIST's hash algorithm competition (SHA-3)
-and selected as one of the five finalists.  Keccak can be considered as a
-successor of RadioGatún; However, it has a very different design philosophy.
+Keccak (pronounced [kɛtʃak], like “ketchak”) is the hash function that has been
+chosen as the winner of NIST's SHA-3 hash algorithm competition. Keccak can be
+considered to be a successor of RadioGatún; However, it has a very different
+design philosophy.
 
 The author of this extension was in no way involved in the development of the
-Keccak hash function. The hash source code was taken directly from NIST
+Keccak hash function itself. The hash source code was taken directly from NIST
 submission package with a few minor variable name changes so that it would play
 nice with PHP.
 
@@ -60,14 +60,5 @@ For more details, see:
 
 The SHA-3 Submission Requirements states:
 
-   "Each submitted algorithm must be available worldwide on a royalty free
-   basis during the period of the hash function competition."
-
-If the algorithm is selected as the winner of the competition, the following
-applies: 
-
    "an irrevocable nonexclusive royalty-free license to practice the referenced
    algorithm, reference implementation or the optimized implementations"
-
-If the algorithm is not selected as the winner, the license will be determined
-by the team.
