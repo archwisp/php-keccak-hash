@@ -79,6 +79,9 @@ PHP_FUNCTION(keccak_hash)
 
       RETURN_FALSE;
    }
-
+#if ZEND_MODULE_API_NO >= 20151012
+   RETVAL_STRINGL(hash, ceil(hash_bit_length / 8));
+#else
    RETURN_STRINGL(hash, ceil(hash_bit_length / 8), 1);
+#endif
 }
